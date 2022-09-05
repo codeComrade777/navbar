@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+.header{
+    background-color: #000;
+    padding: 2rem 5%;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.header .nav-bar a{
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+}
+.header .logo a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.header .nav-bar .active{
+    background-color: #fff;
+    color: #000;
+}
+#menu-btn{
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+.home-container h1{
+   position: absolute;
+   text-align: center;
+   top: 50%;
+   width: 100%;
+   transform: translateY(-50%);
+}
+.home-container h1{
+    font-size: 12rem;
+}
+.home-container h1 span{
+    color: crimson;
+}
+.header .search-icon{
+    color: #fff;
+    font-size: 3rem;
+}
+@media (max-width:991px){
+    html{
+       font-size: 55%;
+    }
+ }
+ @media (max-width:768px){
+    #menu-btn{
+       display: inline-block;
+       color:#fff;
+       font-size: 3rem;
+       padding: 10px;
+    }
+    .header .nav-bar{
+        background-color: #000;
+        color: #fff;
+       position: absolute;
+       top:99%; left:0; right:0;
+       transition: .2s linear;
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header  .nav-bar.active{
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .header .nav-bar a{
+       display: block;
+       margin:2rem;
+    }
+}
+ @media (max-width:450px)
+ {
+    html
+    {
+       font-size: 50%;
+    }
+ }
